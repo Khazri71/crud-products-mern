@@ -1,8 +1,8 @@
 import allowedOrigins from "./allowedOrigins.js"
 
 const corsOptions = {
-    origin : (origin , callback) => {
-        if(allowedOrigins.indexOf(origin) !== -1 || !origin){
+    origin : (origin : string |undefined, callback :  (err: Error | null, allow?: boolean) => void) => {
+        if(allowedOrigins.indexOf(origin!) !== -1 || !origin){
               callback(null , true)
         }else{
               callback(new Error("Not allowed by cors"))
@@ -11,7 +11,7 @@ const corsOptions = {
     },
     methods : ["GET" , "POST" , "PUT" , "DELETE"] ,
     credentials : true ,
-    optionSuccessStatus : 200 
+    optionsSuccessStatus : 200 
 
 }
 
