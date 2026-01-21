@@ -23,7 +23,7 @@ app.use(express.json())
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
-    res.send("API Produis");
+    res.send("API Produits");
 })
 app.use("/api/product" , productRoutes)
 
