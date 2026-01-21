@@ -10,6 +10,7 @@ import corsOptions from "./config/configCors/corsOptions.js"
 import productRoutes from "./routes/productRoutes.js"
 
 
+
 dotenv.config()
 const PORT = process.env.PORT || 5000
 const ENV = process.env.NODE_ENV 
@@ -23,7 +24,7 @@ app.use(express.json())
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
-    res.send("API Produits");
+    res.status(200).json({success: true , message : "Backend : API Produits" , version :"1.0.0"})
 })
 app.use("/api/product" , productRoutes)
 
