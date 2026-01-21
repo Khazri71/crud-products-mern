@@ -44,7 +44,7 @@ export const AddProduct : React.FC= () => {
  if(isError && error) return <div>Erreur</div>
   return (
     <>
-     <h2 className="my-4 text-center">Ajouter</h2>
+     <h2 className="my-4 text-center">Ajouter Produit</h2>
   <form onSubmit={handleSubmitAddProduct}>
  <div className="row g-3">
 
