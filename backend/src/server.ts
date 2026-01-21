@@ -1,4 +1,4 @@
-import express from "express"
+import express, { Request, Response } from "express"
 import dotenv from "dotenv"
 
 import DBConnect from "./config/configDB/dbconn.js"
@@ -22,7 +22,11 @@ app.use(cors(corsOptions))
 app.use(express.json())
 
 //Routes
+app.get("/", (req: Request, res: Response) => {
+    res.send("API Produis");
+})
 app.use("/api/product" , productRoutes)
+
 //.Routes
 
 mongoose.connection.once("open" , () => {
