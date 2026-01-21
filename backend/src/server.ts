@@ -24,7 +24,7 @@ app.use(express.json())
 
 //Routes
 app.get("/", (req: Request, res: Response) => {
-    res.status(200).json({success: true , message : "Backend : API Produits" , version :"1.0.0"})
+    res.status(200).json({success: true , message : "API Produits" , version :"1.0.0"})
 })
 app.use("/api/product" , productRoutes)
 
