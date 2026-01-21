@@ -59,7 +59,7 @@ export const ProductList : React.FC = () => {
     <tr key={product._id}>
       <th scope="row">{index}</th>
       <td>{product.name}</td>
-      <td>{product.price}</td>
+      <td>{product.price} TND </td>
       <td>{product.description}</td>
       <td >
           <Link to={`/${product._id}`} className="text-dark"><BiShow  size={20} className="me-3" /></Link> 
